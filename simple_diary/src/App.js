@@ -5,7 +5,6 @@ import DiaryList from "./DiaryList";
 
 const App = () => {
   const [data, setData] = useState([]);
-
   const dataId = useRef(0);
 
   const onCreate = (author, content, emotion) => {
@@ -26,7 +25,7 @@ const App = () => {
     const newDiaryList = data.filter((it) => it.id !== targetId);
     setData(newDiaryList);
   };
-
+ 
   return (
     <div className="App">
       <DiaryEditor onCreate={onCreate} />
